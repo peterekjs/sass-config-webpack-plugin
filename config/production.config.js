@@ -4,7 +4,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 /**
  * Common Production Config
  *
- * @param {Required<import("./index.js").SassWebpackPluginOptions>} options
+ * @param {Required<import("../index.js").SassConfigWebpackPluginOptions>} options
  * @returns {{ module: { rules : Array<any> }, plugins: Array<(new (): any)> }}
  */
 exports = module.exports = options => ({

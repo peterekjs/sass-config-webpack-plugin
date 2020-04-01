@@ -6,7 +6,7 @@
 /** @typedef {import('ts-essentials').DeepRequired<import("webpack").Compiler>} WebpackCompiler */
 /**
  * Plugin Options
- * @typedef {{ mode?: 'production' | 'development'; implementation?: any; }} SassWebpackPluginOptions
+ * @typedef {{ mode?: 'production' | 'development'; implementation?: any; filename?: string; chunkFilename?: string; }} SassConfigWebpackPluginOptions
  */
 const defaultOptions = {}
 /**
@@ -38,7 +38,7 @@ function fixFileNames (output)
 class SassWebpackPlugin
 {
     /**
-     * @param {Partial<SassWebpackPluginOptions>} [options]
+     * @param {Partial<SassConfigWebpackPluginOptions>} [options]
      */
     constructor (options = {})
     {
@@ -57,11 +57,15 @@ class SassWebpackPlugin
 
         const { filename, chunkFilename } = fixFileNames(compiler.options.output)
 
+        /**
+         * @type {Required<SassConfigWebpackPluginOptions>}
+         */
         const options = {
             filename,
             chunkFilename,
             mode: modeProduction ? 'production' : 'development',
-            ...this.options
+            implementation: void 0,
+            ...this.options,
         }
 
         const config = modeProduction
