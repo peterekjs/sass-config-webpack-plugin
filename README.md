@@ -1,6 +1,8 @@
 # sass-config-webpack-plugin
 Preset for Dart Sass webpack configuration
 
+Basically does the same as ⚙️**[scss-config-webpack-plugin](https://github.com/namics/webpack-config-plugins/tree/master/packages/scss-config-webpack-plugin)** but uses **[Dart Sass](https://www.npmjs.com/package/sass)** as primary compiler.
+
 ## Installation
 ```bash
 npm i -D @peterek/sass-config-webpack-plugin
