@@ -1,0 +1,11 @@
+{
+    "root": true,
+    "extends": [
+        "@peterek/base",
+        "@peterek/indent"
+    ],
+    "ignorePatterns": [
+        "dist/**/*",
+        "node_modules/**/*"
+    ]
+}
