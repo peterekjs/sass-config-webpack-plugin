@@ -1,6 +1,6 @@
 {
   "name": "@peterek/sass-config-webpack-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Preset for Dart Sass webpack configuration",
   "main": "index.js",
   "scripts": {
