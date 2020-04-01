@@ -8,10 +8,7 @@
  * Plugin Options
  * @typedef {{ mode?: 'production' | 'development'; implementation?: any; }} SassWebpackPluginOptions
  */
-const defaultOptions = {
-    mode: 'production',
-    implementation: void 0,
-}
+const defaultOptions = {}
 /**
  * Use compiler.options.output configuration also for css
  * Replace folder names called js and extends called js to css
