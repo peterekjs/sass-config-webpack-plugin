@@ -16,6 +16,9 @@ const defaultOptions = {
  * Use compiler.options.output configuration also for css
  * Replace folder names called js and extends called js to css
  * E.g. 'js/x.[id].js' -> 'css/x.[id].css'
+ *
+ * @see https://github.com/namics/webpack-config-plugins/blob/a48a609a0d730bfbe16f493e207562bfa540aed0/packages/scss-config-webpack-plugin/src/ScssConfigWebpackPlugin.js#L38-L44
+ *
  * @param {WebpackCompiler['options']['output']} output
  * @returns {{ filename: string; chunkFilename: string; }}
  */
