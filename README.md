@@ -13,7 +13,7 @@ const SassWebpackPlugin = require('@peterek/sass-config-webpack-plugin')
 
 module.exports = {
     plugins: [
-        new SassWebpackPlugin(/* options */)
+        new SassWebpackPlugin()
     ]
 }
 
