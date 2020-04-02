@@ -55,6 +55,7 @@ exports = module.exports = options => ({
         new MiniCssExtractPlugin({
             filename: options.filename,
             chunkFilename: options.chunkFilename,
+            ignoreOrder: false,
         }),
         // Minify css - but use only safe css-nano transformations
         // https://github.com/facebook/create-react-app/pull/4706

@@ -1,3 +1,5 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
 /**
  * Common Development Config
  *
@@ -13,7 +15,10 @@ exports = module.exports = options => ({
                 extensions: ['.scss', '.sass', '.css']
             },
             use: [{
-                loader: require.resolve('style-loader'),
+                ...require('../lib/minicss')(options, {
+                    hmr: true,
+                    reloadAll: true,
+                })
             }, {
                 loader: require.resolve('css-loader'),
                 options: {
@@ -33,7 +38,10 @@ exports = module.exports = options => ({
                 extensions: ['.scss', '.sass', '.css']
             },
             use: [{
-                loader: require.resolve('style-loader'),
+                ...require('../lib/minicss')(options, {
+                    hmr: true,
+                    reloadAll: true,
+                })
             }, {
                 loader: require.resolve('css-loader'),
                 options: {
@@ -50,5 +58,11 @@ exports = module.exports = options => ({
             }],
         }]
     },
-    plugins: []
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: options.filename,
+            chunkFilename: options.chunkFilename,
+            ignoreOrder: false,
+        }),
+    ]
 })
